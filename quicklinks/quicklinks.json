@@ -1,0 +1,24 @@
+{
+  "name": "default",
+  "description": "default quick links configuration",
+  "configuration": {
+
+    "links": [
+	  {
+        "name": "eventdb_ui",
+        "label": "EVENTDB UI",
+        "requires_user_name": "false",
+        "component_name": "EVENTDB_SERVER",
+        "url":"%@://%@:%@",
+        "port":{
+          "http_property": "8081",
+          "http_default_port": "8081",
+          "https_property": "8081",
+          "https_default_port": "8081",
+          "regex": "^(\\d+)$",
+          "site": "EVENTDB"
+        }
+      }
+    ]
+  }
+}

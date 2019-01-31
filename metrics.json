@@ -1,0 +1,36 @@
+{
+ "EVENTDB_SERVER": {
+ "Component": [{
+ "type": "ganglia",
+ "metrics": {
+ "default": {
+ "metrics/eventdb/totaltables": {
+ "metric": "totaltables",
+ "pointInTime": true,
+ "temporal": true
+ },
+ "metrics/eventdb/totalevents": {
+ "metric": "totalevents",
+ "pointInTime": true,
+ "temporal": true
+ },
+ "metrics/eventdb/totalfiles": {
+ "metric": "totalfiles",
+ "pointInTime": true,
+ "temporal": true
+ },
+ "metrics/eventdb/writespeed": {
+ "metric": "writespeed",
+ "pointInTime": true,
+ "temporal": true
+ },
+ "metrics/eventdb/readlatency": {
+ "metric": "readlatency",
+ "pointInTime": true,
+ "temporal": true
+ }
+ }
+ }
+ }]
+ }
+}

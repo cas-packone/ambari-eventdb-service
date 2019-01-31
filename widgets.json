@@ -1,0 +1,124 @@
+{
+ "layouts": [
+ {
+ "layout_name": "default_eventdb_dashboard",
+ "display_name": "Standard EVENTDB Dashboard",
+ "section_name": "EVENTDB_SUMMARY",
+ "widgetLayoutInfo": [
+ {
+ "widget_name": "Total Parsed Files",
+ "description": "Total Files Parsed by Eventdb",
+ "widget_type": "NUMBER",
+ "is_visible": true,
+ "metrics": [
+ {
+ "name": "files",
+ "metric_path": "metrics/eventdb/totalfiles",
+ "service_name": "EVENTDB",
+ "component_name": "EVENTDB_SERVER"
+ }
+ ],
+ "values": [
+ {
+ "name": "The Number of Files",
+ "value": "${files}"
+ }
+ ]
+ },
+ {
+ "widget_name": "Total Tables",
+ "description": "Total Tables Stored in Eventdb",
+ "widget_type": "NUMBER",
+ "is_visible": true,
+ "metrics": [
+ {
+ "name": "tables",
+ "metric_path": "metrics/eventdb/totaltables",
+ "service_name": "EVENTDB",
+ "component_name": "EVENTDB_SERVER"
+ }
+ ],
+ "values": [
+ {
+ "name": "The Number of Tables",
+ "value": "${tables}"
+ }
+ ]
+ },
+ {
+ "widget_name": "Total Events",
+ "description": "Total Events Stored in Eventdb",
+ "widget_type": "NUMBER",
+ "is_visible": true,
+ "metrics": [
+ {
+ "name": "events",
+ "metric_path": "metrics/eventdb/totalevents",
+ "service_name": "EVENTDB",
+ "component_name": "EVENTDB_SERVER"
+ }
+ ],
+ "values": [
+ {
+ "name": "The Number of Events",
+ "value": "${events/1000000.0}"
+ }
+ ],
+ "properties": {
+ "display_unit": "M"
+}
+},
+ {
+ "widget_name": "Write Speed",
+ "description": "Write Speed",
+ "widget_type": "GRAPH",
+ "is_visible": true,
+ "metrics": [
+ {
+ "name": "write",
+ "metric_path": "metrics/eventdb/writespeed",
+ "service_name": "EVENTDB",
+ "component_name": "EVENTDB_SERVER"
+ }
+ ],
+ "values": [
+ {
+ "name": "Write Speed",
+ "value": "${write}"
+ }
+ ],
+ "properties": {
+ "graph_type": "LINE",
+ "time_range": "1",
+ "display_unit": "events/s"
+ }
+ },
+ {
+ "widget_name": "Read Latency",
+ "description": "Read Latency",
+ "widget_type": "GRAPH",
+ "is_visible": true,
+ "metrics": [
+ {
+ "name": "read",
+ "metric_path": "metrics/eventdb/readlatency",
+ "service_name": "EVENTDB",
+ "component_name": "EVENTDB_SERVER"
+ }
+ ],
+ "values": [
+ {
+ "name": "Read Latency",
+ "value": "${read}"
+ }
+ ],
+ "properties": {
+ "graph_type": "LINE",
+ "display_unit": "ms",
+ "time_range": "1"
+ }
+ }
+ ]
+ }
+ ]
+}
