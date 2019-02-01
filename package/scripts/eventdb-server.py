@@ -38,7 +38,7 @@ class EventdbServer(Script):
         self.configure(env)
         service_packagedir = params.service_packagedir
         Execute('find '+params.service_packagedir+' -iname "*.sh" | xargs chmod +x')
-        Execute("echo source /etc/profile.d/java.sh; \"nohup " + params.eventdb_dir + "/eventdb-java/eventdb server 8081  2>&1 >/dev/null &\"|at now +1 min")
+        Execute("echo \"source /etc/profile.d/java.sh; nohup " + params.eventdb_dir + "/eventdb-java/eventdb server 8081  2>&1 >/dev/null &\"|at now +1 min")
         Execute(format("echo \"nohup {service_packagedir}/scripts/eventdb_metric_send.sh {collector_host} {current_host_name} &\"|at now +1 min"))
         sleep(60)
         Execute("ps -ef | grep -v grep | grep \"eventdb.Run server\" | awk '{print $2}' >/tmp/eventdb.pid")
