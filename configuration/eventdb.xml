@@ -12,12 +12,12 @@ hbase.zookeeper.quorum = master1.packone,master2.packone,slave0001.packone
 hbase.hregion.max.filesize = 21474836480
 hbase.hregion.filesize.threshold = 8589934592
 hbase.client.keyvalue.maxsize = 524288000
-hbase.master = master1.packone:16000
+hbase.master = master2.packone:16000
 zookeeper.znode.parent = /hbase-unsecure
 
 #hdfs
 hbase.rootdir = /apps/hbase/data
-fs.defaultFS = hdfs://master1.packone:8020
+fs.defaultFS = hdfs://master2.packone:8020
 fs.user = hbase
 
 #fits
