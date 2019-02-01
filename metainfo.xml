@@ -22,7 +22,7 @@
       <name>EVENTDB</name>
       <displayName>EventDB</displayName>
       <comment>A multidimensional database system for semi-strucured big data</comment>
-      <version>1.0.0</version>
+      <version>1.1.0</version>
       <components>
         <component>
           <name>EVENTDB_CLIENT</name>
